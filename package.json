@@ -1,7 +1,7 @@
 {
   "name": "redux-tutorial",
   "version": "0.0.1",
-  "description": "a todo app that you'd never want to use",
+  "description": "a lead app that you'd never want to use",
   "main": "index.js",
   "scripts": {
     "test": " ",

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {Card, Col} from 'react-materialize';
 
-const NewTodo = ({onChange}) => (
+const NewLead = ({onChange}) => (
 <Col m={6} s={12}>
   <Card className='white' textClassName='black-text'>
       <h3>Add A Lead</h3>
@@ -11,4 +11,4 @@ const NewTodo = ({onChange}) => (
 </Col>
 )
 
-export default NewTodo
+export default NewLead

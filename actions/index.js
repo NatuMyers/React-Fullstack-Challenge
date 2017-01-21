@@ -1,13 +1,13 @@
-export function addTodo(todo){
+export function addLead(lead){
   return {
-    type: 'addTodo',
-    todo
+    type: 'addLead',
+    lead
   }
 }
 
-export function deleteTodo(index){
+export function deleteLead(index){
   return {
-    type: 'deleteTodo',
+    type: 'deleteLead',
     index
   }
 }
