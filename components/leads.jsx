@@ -26,12 +26,12 @@ const Leads = ({leads, dispatch}) => (
 
                   {
                     leads.map(
-                      (lead, index) => <Card className='card  hoverable' textClassName='black-text' title={lead} key={index}>
+                      (lead, index) => <Card className='card  hoverable' textClassName='black-text' title={lead.name} key={index}>
 
 
 
                       <Row>
-                        <Input s={6} label="Name" value={lead} validate><Icon>account_circle</Icon></Input>
+                        <Input s={6} label="Name" value={lead.name} validate><Icon>account_circle</Icon></Input>
                         <Input s={6} label="Telephone" validate type='tel'><Icon>phone</Icon></Input>
                       </Row>
 
