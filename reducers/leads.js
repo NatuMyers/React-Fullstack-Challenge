@@ -1,6 +1,6 @@
 import Immutable from 'immutable'
 
-export default (state = Immutable.List(['Code More!']), action) => {
+export default (state = Immutable.List(['John Doe']), action) => {
   switch(action.type) {
     case 'addLead':
       return state.unshift(action.lead)

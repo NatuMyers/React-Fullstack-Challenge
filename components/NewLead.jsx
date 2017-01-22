@@ -1,12 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Card, Col} from 'react-materialize';
+import {Card, Col, Input, Icon} from 'react-materialize';
 
 const NewLead = ({onChange}) => (
 <Col m={6} s={12}>
-  <Card className='white' textClassName='black-text'>
+  <br></br>
+  <Card className='white hoverable' textClassName='black-text'>
       <h3>Add A Lead</h3>
-      <input type="text" onKeyUp={onChange}/>
+      <br></br>
+      <Input Input s={6} label="Name" validate onKeyUp={onChange}><Icon>account_circle</Icon></Input>
   </Card>
 </Col>
 )
