@@ -14,6 +14,17 @@ export default (state = Immutable.List(['John Doe']), action) => {
 
       })
 
+
+
+    case 'saveLead':
+      return state.unshift({ // unshift is the same as push, but it puts it at the bottom of the list
+        phone: action.lead
+      })
+
+    case 'deleteLead':
+      return state.filter((lead, index) => index !== action.index)
+
+
     case 'deleteLead':
       return state.filter((lead, index) => index !== action.index)
     default:

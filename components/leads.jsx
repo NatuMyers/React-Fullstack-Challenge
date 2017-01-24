@@ -1,61 +1,58 @@
 import React from 'react'
+
+// connect allows us to choose what parts of our state we want to give to our React component.
 import { connect } from 'react-redux'
 
+// import actions
 import NewLead from './NewLead'
-import { addLead, deleteLead } from '../actions'
+import SaveLead from './SaveLead'
+
+import { addLead, deleteLead, setLeadPhone } from '../actions'
 import {Button, Table, Card, Row, Icon, Input, Collapsible, CollapsibleItem} from 'react-materialize';
 
-
-
 const Leads = ({leads, dispatch}) => (
+
+
   <div>
 
-
-
-      <NewLead onChange={e => {
-        if(e.keyCode == 13){
-          dispatch(addLead(e.target.value))
-          e.target.value = ''
+      <NewLead onChange={e => { // 'e' is what is entered in
+        if(e.keyCode == 13){ // keycode 13 is enter
+          dispatch(addLead(e.target.value)) // To dispatch (execute) an action to change the state
+          // the 'target' event property returns the element that triggered the event
+          e.target.value = '' // now empty it right after to clear it
         }
+
       }}/>
-
-
 
         <Card className='white ' textClassName='black-text'>
         <h3>Current Leads</h3>
-
                   {
                     leads.map(
-                      (lead, index) => <Card className='card  hoverable' textClassName='black-text' title={lead.name} key={index}>
+                        (lead, index) => <Card className='card  hoverable' textClassName='black-text' title={lead.name} key={index}>
+                        <br></br>
+
+                        {lead.phone}
+
+                        <SaveLead onChange={e => {
+                          if(e.keyCode == 13){
+                            dispatch(setLeadPhone(e.target.value))
+                            e.target.value = ''
+                          }
+                        }}/>
+
+                        <Button  className='right hoverable waves-effect waves-yellow btn  ' onClick={e => {dispatch(deleteLead(index))}}>
+                          Delete
+                        </Button>
 
 
+                        <br></br>
+                        <br></br>
 
-                      <Row>
-                        <Input s={6} label="Name" value={lead.name} validate><Icon>account_circle</Icon></Input>
-                        <Input s={6} label="Telephone" validate type='tel'><Icon>phone</Icon></Input>
-                      </Row>
-
-                      <Collapsible popout>
-                        <CollapsibleItem header='Write A Call Log' className='hoverable'  icon='edit'>
-                          Lorem ipsum dolor sit amet.
-                        </CollapsibleItem>
-                      </Collapsible>
-
-                      <br></br>
-
-                                                <Button  className='right ' onClick={e => {dispatch(deleteLead(index))}}>
-                                                  Delete
-                                                </Button>
-                                                <br></br>
-                                                <br></br>
-
-                                        </Card>
-                              )
+                        </Card>
+                        )
                   }
 
         </Card>
-
-
 
   </div>
 
