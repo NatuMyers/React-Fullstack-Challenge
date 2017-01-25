@@ -1,3 +1,11 @@
+# Please See My Flask Challenge Instead. It's much better
+https://github.com/NatuMyers/Flask-Challenge
+
+# Looking Good, but managing state properly was a challenge.
+
+https://gyazo.com/4c0baf14a6acb8779538d6d0fb59044f
+
+
 # CRM - demo - redux
 
 Based off of http://reactjsnews.com/your-first-redux-app to provide simple CRM functionality, such as:
