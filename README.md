@@ -3,7 +3,7 @@ https://github.com/NatuMyers/Flask-Challenge
 
 # Looking Good, but managing state properly was a challenge.
 
-(https://gyazo.com/4c0baf14a6acb8779538d6d0fb59044f)
+![alt tag](https://gyazo.com/4c0baf14a6acb8779538d6d0fb59044f)
 
 
 # CRM - demo - redux
