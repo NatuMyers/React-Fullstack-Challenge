@@ -1,7 +1,7 @@
 # Please See My Flask Challenge Instead. It's much better
 https://github.com/NatuMyers/Flask-Challenge
 
-# Looking Good, but managing state properly was a challenge.
+# Looking Good, but managing states properly was a challenge so the state needs work. This uses React-Materialize.
 
 ![alt tag](https://i.gyazo.com/4c0baf14a6acb8779538d6d0fb59044f.gif)
 
